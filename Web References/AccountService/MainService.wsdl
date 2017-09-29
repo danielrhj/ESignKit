@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/CostAccountWS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/CostAccountWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/CostAccountWS">
+      <s:element name="SendMessageFromLogistic_ALL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eal01" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageFromLogistic_ALLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMessageFromLogistic_ALLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelMessageFromFI_ALL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eal01" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelMessageFromFI_ALLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelMessageFromFI_ALLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountNo_TIPTOP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eal01" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountNo_TIPTOPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountNo_TIPTOPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountStatus_TIPTOP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eal01" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountStatus_TIPTOPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountStatus_TIPTOPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendMessageFromLogistic_ALLSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessageFromLogistic_ALL" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageFromLogistic_ALLSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageFromLogistic_ALLResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelMessageFromFI_ALLSoapIn">
+    <wsdl:part name="parameters" element="tns:DelMessageFromFI_ALL" />
+  </wsdl:message>
+  <wsdl:message name="DelMessageFromFI_ALLSoapOut">
+    <wsdl:part name="parameters" element="tns:DelMessageFromFI_ALLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNo_TIPTOPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountNo_TIPTOP" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNo_TIPTOPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountNo_TIPTOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountStatus_TIPTOPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountStatus_TIPTOP" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountStatus_TIPTOPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountStatus_TIPTOPResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AccountServiceSoap">
+    <wsdl:operation name="SendMessageFromLogistic_ALL">
+      <wsdl:input message="tns:SendMessageFromLogistic_ALLSoapIn" />
+      <wsdl:output message="tns:SendMessageFromLogistic_ALLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelMessageFromFI_ALL">
+      <wsdl:input message="tns:DelMessageFromFI_ALLSoapIn" />
+      <wsdl:output message="tns:DelMessageFromFI_ALLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountNo_TIPTOP">
+      <wsdl:input message="tns:GetAccountNo_TIPTOPSoapIn" />
+      <wsdl:output message="tns:GetAccountNo_TIPTOPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountStatus_TIPTOP">
+      <wsdl:input message="tns:GetAccountStatus_TIPTOPSoapIn" />
+      <wsdl:output message="tns:GetAccountStatus_TIPTOPSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountServiceSoap" type="tns:AccountServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessageFromLogistic_ALL">
+      <soap:operation soapAction="http://tempuri.org/CostAccountWS/SendMessageFromLogistic_ALL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelMessageFromFI_ALL">
+      <soap:operation soapAction="http://tempuri.org/CostAccountWS/DelMessageFromFI_ALL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountNo_TIPTOP">
+      <soap:operation soapAction="http://tempuri.org/CostAccountWS/GetAccountNo_TIPTOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountStatus_TIPTOP">
+      <soap:operation soapAction="http://tempuri.org/CostAccountWS/GetAccountStatus_TIPTOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AccountServiceSoap12" type="tns:AccountServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessageFromLogistic_ALL">
+      <soap12:operation soapAction="http://tempuri.org/CostAccountWS/SendMessageFromLogistic_ALL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelMessageFromFI_ALL">
+      <soap12:operation soapAction="http://tempuri.org/CostAccountWS/DelMessageFromFI_ALL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountNo_TIPTOP">
+      <soap12:operation soapAction="http://tempuri.org/CostAccountWS/GetAccountNo_TIPTOP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountStatus_TIPTOP">
+      <soap12:operation soapAction="http://tempuri.org/CostAccountWS/GetAccountStatus_TIPTOP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountService">
+    <wsdl:port name="AccountServiceSoap" binding="tns:AccountServiceSoap">
+      <soap:address location="http://lcesign.efoxconn.com/CostAccountWS/MainService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AccountServiceSoap12" binding="tns:AccountServiceSoap12">
+      <soap12:address location="http://lcesign.efoxconn.com/CostAccountWS/MainService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B88FADE-219B-4447-9FFF-883CFEEB3126}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CostErrDeal</RootNamespace>
+    <AssemblyName>EsignKit</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>CostErrDeal.Program</StartupObject>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>D:\Publish\EsignKit20150728\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B9C339D17AC7C959DFF03CB0EEB1C3AD67F23CEE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CostErrDeal_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DIYGENS.COM.FRAMEWORK, Version=33.98.70.77, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DIYGENS.COM.FRAMEWORK.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>bin\Debug\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="IBM.Data.Informix, Version=2.81.0.0, Culture=neutral, PublicKeyToken=7c307b91aa13d208">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC\IBM.Data.Informix\2.81.0.0__7c307b91aa13d208\IBM.Data.Informix.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMS\AdjustAPAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMS\AdjustAPAmount.Designer.cs">
+      <DependentUpon>AdjustAPAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Command.cs" />
+    <Compile Include="DBCommon.cs" />
+    <Compile Include="Esign\EsignInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esign\EsignInvoice.Designer.cs">
+      <DependentUpon>EsignInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Esign\frmSignPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esign\frmSignPath.Designer.cs">
+      <DependentUpon>frmSignPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Esign\SendEalAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esign\SendEalAccount.Designer.cs">
+      <DependentUpon>SendEalAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\CheckAccountSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\CheckAccountSource.Designer.cs">
+      <DependentUpon>CheckAccountSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\frmActorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\frmActorInfo.Designer.cs">
+      <DependentUpon>frmActorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\EInvoiceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\EInvoiceStatus.Designer.cs">
+      <DependentUpon>EInvoiceStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\eInvoiceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\eInvoiceUpdate.Designer.cs">
+      <DependentUpon>eInvoiceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\EsignActorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\EsignActorUpdate.Designer.cs">
+      <DependentUpon>EsignActorUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\EsignAttachUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\EsignAttachUpdate.Designer.cs">
+      <DependentUpon>EsignAttachUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\EsignCodeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\EsignCodeUpdate.Designer.cs">
+      <DependentUpon>EsignCodeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\frmEalFileFlag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\frmEalFileFlag.Designer.cs">
+      <DependentUpon>frmEalFileFlag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\frmKFDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\frmKFDocs.Designer.cs">
+      <DependentUpon>frmKFDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KFErr\frmKFPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KFErr\frmKFPicture.Designer.cs">
+      <DependentUpon>frmKFPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Esign\frmInvoiceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esign\frmInvoiceUpdate.Designer.cs">
+      <DependentUpon>frmInvoiceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD5.cs" />
+    <Compile Include="MDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMain.Designer.cs">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\frmDBInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\frmDBInfo.Designer.cs">
+      <DependentUpon>frmDBInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DBInfoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BMS\AdjustAPAmount.resx">
+      <DependentUpon>AdjustAPAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esign\EsignInvoice.resx">
+      <DependentUpon>EsignInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esign\frmSignPath.resx">
+      <DependentUpon>frmSignPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esign\SendEalAccount.resx">
+      <DependentUpon>SendEalAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\CheckAccountSource.resx">
+      <DependentUpon>CheckAccountSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\frmActorInfo.resx">
+      <DependentUpon>frmActorInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\EInvoiceStatus.resx">
+      <DependentUpon>EInvoiceStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\eInvoiceUpdate.resx">
+      <DependentUpon>eInvoiceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\EsignActorUpdate.resx">
+      <DependentUpon>EsignActorUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\EsignAttachUpdate.resx">
+      <DependentUpon>EsignAttachUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\EsignCodeUpdate.resx">
+      <DependentUpon>EsignCodeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\frmEalFileFlag.resx">
+      <DependentUpon>frmEalFileFlag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\frmKFDocs.resx">
+      <DependentUpon>frmKFDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KFErr\frmKFPicture.resx">
+      <DependentUpon>frmKFPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esign\frmInvoiceUpdate.resx">
+      <DependentUpon>frmInvoiceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMain.resx">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tool\frmTiptopInfo.resx">
+      <DependentUpon>frmTiptopInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\frmDBInfo.resx">
+      <DependentUpon>frmDBInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="CostErrDeal_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tool\frmTiptopInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\frmTiptopInfo.Designer.cs">
+      <DependentUpon>frmTiptopInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AccountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="Web References\DBInfoWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DBInfoWS\SendARReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DBInfoWS\Service1.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\發票簽核流程圖.gif" />
+    <Content Include="GLDCostErrDeal.ico" />
+    <Content Include="msiexec.exe" />
+    <Content Include="tasma.ico" />
+    <None Include="Web References\DBInfoWS\Service1.disco" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\AccountService\MainService.disco" />
+    <None Include="Web References\AccountService\MainService.wsdl" />
+    <None Include="Web References\AccountService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.130.14.103/ZYWuliu4TiptopJiebao/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DBInfoWS\</RelPath>
+      <UpdateFromURL>http://10.130.14.103/ZYWuliu4TiptopJiebao/Service1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EsignKit_DBInfoWS_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lcesign.efoxconn.com/CostAccountWS/MainService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AccountService\</RelPath>
+      <UpdateFromURL>http://lcesign.efoxconn.com/CostAccountWS/MainService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CostErrDeal_AccountService_AccountService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
