@@ -15,6 +15,8 @@ namespace CostErrDeal.Esign
         private static string CostDB = "server=10.134.97.29,3000;user id=daniel;password=daniel123;database=COST";
         private static string KFZXDB = "server=10.134.97.29,3000;user id=daniel;password=daniel123;database=CentralIBPMFramework";
 
+        //test0001
+
         public frmTiptopInfo()
         {
             InitializeComponent(); 
